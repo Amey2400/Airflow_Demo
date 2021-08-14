@@ -1,0 +1,50 @@
+[2021-08-11 16:01:12,237] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.transform_data 2021-08-11T16:01:10.193474+00:00 [queued]>
+[2021-08-11 16:01:12,253] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.transform_data 2021-08-11T16:01:10.193474+00:00 [queued]>
+[2021-08-11 16:01:12,254] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-11 16:01:12,254] {taskinstance.py:1088} INFO - Starting attempt 1 of 2
+[2021-08-11 16:01:12,255] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-11 16:01:12,265] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): transform_data> on 2021-08-11T16:01:10.193474+00:00
+[2021-08-11 16:01:12,270] {standard_task_runner.py:52} INFO - Started process 2330 to run task
+[2021-08-11 16:01:12,274] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pipeline_try', 'transform_data', '2021-08-11T16:01:10.193474+00:00', '--job-id', '4', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_try1.py', '--cfg-path', '/tmp/tmpqlyopxln', '--error-file', '/tmp/tmpi0l1hy0_']
+[2021-08-11 16:01:12,278] {standard_task_runner.py:77} INFO - Job 4: Subtask transform_data
+[2021-08-11 16:01:12,321] {logging_mixin.py:104} INFO - Running <TaskInstance: pipeline_try.transform_data 2021-08-11T16:01:10.193474+00:00 [running]> on host 9d72a0011461
+[2021-08-11 16:01:12,377] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=ameysonje242000@gmail.com
+AIRFLOW_CTX_DAG_OWNER=amey
+AIRFLOW_CTX_DAG_ID=pipeline_try
+AIRFLOW_CTX_TASK_ID=transform_data
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-11T16:01:10.193474+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-11T16:01:10.193474+00:00
+[2021-08-11 16:01:12,379] {logging_mixin.py:104} INFO - C:\Users\amey sonje\Downloads\annual-enterprise-survey-2020-financial-year-provisional-csv.csv
+[2021-08-11 16:01:12,379] {logging_mixin.py:104} INFO - C:\Users\amey sonje\Downloads\annual-enterprise-survey-2020-financial-year-provisional-csv-transformed.csv
+[2021-08-11 16:01:12,381] {taskinstance.py:1501} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1157, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1331, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1361, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/pipeline_try1.py", line 31, in transform_data
+    usecols=['Year','Industry_name_NZSIOC']
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 688, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 454, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 948, in __init__
+    self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 1180, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 2010, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 382, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\amey sonje\\Downloads\\annual-enterprise-survey-2020-financial-year-provisional-csv.csv'
+[2021-08-11 16:01:12,386] {taskinstance.py:1551} INFO - Marking task as UP_FOR_RETRY. dag_id=pipeline_try, task_id=transform_data, execution_date=20210811T160110, start_date=20210811T160112, end_date=20210811T160112
+[2021-08-11 16:01:12,447] {local_task_job.py:149} INFO - Task exited with return code 1

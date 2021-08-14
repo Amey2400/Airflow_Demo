@@ -1,0 +1,26 @@
+[2021-08-13 09:22:03,173] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.is_today 2021-08-13T09:21:59.307600+00:00 [queued]>
+[2021-08-13 09:22:03,191] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.is_today 2021-08-13T09:21:59.307600+00:00 [queued]>
+[2021-08-13 09:22:03,191] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-13 09:22:03,192] {taskinstance.py:1088} INFO - Starting attempt 1 of 2
+[2021-08-13 09:22:03,192] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-13 09:22:03,202] {taskinstance.py:1107} INFO - Executing <Task(BranchPythonOperator): is_today> on 2021-08-13T09:21:59.307600+00:00
+[2021-08-13 09:22:03,210] {standard_task_runner.py:52} INFO - Started process 20652 to run task
+[2021-08-13 09:22:03,213] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pipeline_try', 'is_today', '2021-08-13T09:21:59.307600+00:00', '--job-id', '169', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_try1.py', '--cfg-path', '/tmp/tmp5n2cptd2', '--error-file', '/tmp/tmpf2j53_t6']
+[2021-08-13 09:22:03,217] {standard_task_runner.py:77} INFO - Job 169: Subtask is_today
+[2021-08-13 09:22:03,268] {logging_mixin.py:104} INFO - Running <TaskInstance: pipeline_try.is_today 2021-08-13T09:21:59.307600+00:00 [running]> on host 99300daf4d26
+[2021-08-13 09:22:03,326] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=ameysonje242000@gmail.com
+AIRFLOW_CTX_DAG_OWNER=amey
+AIRFLOW_CTX_DAG_ID=pipeline_try
+AIRFLOW_CTX_TASK_ID=is_today
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-13T09:21:59.307600+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-13T09:21:59.307600+00:00
+[2021-08-13 09:22:03,335] {logging_mixin.py:104} INFO - today is 4
+[2021-08-13 09:22:03,336] {python.py:151} INFO - Done. Returned value was: friday_Task
+[2021-08-13 09:22:03,339] {skipmixin.py:124} INFO - Following branch friday_Task
+[2021-08-13 09:22:03,347] {skipmixin.py:155} INFO - Skipping tasks ['none']
+[2021-08-13 09:22:03,401] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=pipeline_try, task_id=is_today, execution_date=20210813T092159, start_date=20210813T092203, end_date=20210813T092203
+[2021-08-13 09:22:03,435] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-13 09:22:03,467] {local_task_job.py:149} INFO - Task exited with return code 0

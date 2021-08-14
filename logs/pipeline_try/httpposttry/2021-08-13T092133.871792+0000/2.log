@@ -1,0 +1,52 @@
+[2021-08-13 09:35:05,573] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.httpposttry 2021-08-13T09:21:33.871792+00:00 [queued]>
+[2021-08-13 09:35:05,591] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.httpposttry 2021-08-13T09:21:33.871792+00:00 [queued]>
+[2021-08-13 09:35:05,591] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-13 09:35:05,592] {taskinstance.py:1088} INFO - Starting attempt 2 of 2
+[2021-08-13 09:35:05,592] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-13 09:35:05,604] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): httpposttry> on 2021-08-13T09:21:33.871792+00:00
+[2021-08-13 09:35:05,608] {standard_task_runner.py:52} INFO - Started process 24609 to run task
+[2021-08-13 09:35:05,612] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pipeline_try', 'httpposttry', '2021-08-13T09:21:33.871792+00:00', '--job-id', '184', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_try1.py', '--cfg-path', '/tmp/tmp_85mys7b', '--error-file', '/tmp/tmp4c7g28mq']
+[2021-08-13 09:35:05,615] {standard_task_runner.py:77} INFO - Job 184: Subtask httpposttry
+[2021-08-13 09:35:05,657] {logging_mixin.py:104} INFO - Running <TaskInstance: pipeline_try.httpposttry 2021-08-13T09:21:33.871792+00:00 [running]> on host 99300daf4d26
+[2021-08-13 09:35:05,705] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=ameysonje242000@gmail.com
+AIRFLOW_CTX_DAG_OWNER=amey
+AIRFLOW_CTX_DAG_ID=pipeline_try
+AIRFLOW_CTX_TASK_ID=httpposttry
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-13T09:21:33.871792+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-13T09:21:33.871792+00:00
+[2021-08-13 09:35:05,707] {http.py:111} INFO - Calling HTTP method
+[2021-08-13 09:35:05,715] {base.py:78} INFO - Using connection to: id: http_post. Host: 172.31.208.1, Port: 8000, Schema: , Login: , Password: None, extra: {}
+[2021-08-13 09:35:05,717] {http.py:140} INFO - Sending 'POST' to url: http://172.31.208.1:8000/Users/
+[2021-08-13 09:35:05,736] {http.py:154} ERROR - HTTP error: Bad Request
+[2021-08-13 09:35:05,737] {http.py:155} ERROR - {"user_id":["users with this user id already exists."]}
+[2021-08-13 09:35:05,745] {taskinstance.py:1501} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/http/hooks/http.py", line 152, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.6/site-packages/requests/models.py", line 943, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://172.31.208.1:8000/Users/
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1157, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1331, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1361, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/http/operators/http.py", line 113, in execute
+    response = http.run(self.endpoint, self.data, self.headers, self.extra_options)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/http/hooks/http.py", line 141, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/http/hooks/http.py", line 198, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/http/hooks/http.py", line 156, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 400:Bad Request
+[2021-08-13 09:35:05,747] {taskinstance.py:1551} INFO - Marking task as FAILED. dag_id=pipeline_try, task_id=httpposttry, execution_date=20210813T092133, start_date=20210813T093505, end_date=20210813T093505
+[2021-08-13 09:35:05,784] {local_task_job.py:149} INFO - Task exited with return code 1

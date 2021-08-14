@@ -1,0 +1,25 @@
+[2021-08-13 07:00:21,398] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.transform_data 2021-08-12T00:00:00+00:00 [queued]>
+[2021-08-13 07:00:21,429] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.transform_data 2021-08-12T00:00:00+00:00 [queued]>
+[2021-08-13 07:00:21,430] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-13 07:00:21,431] {taskinstance.py:1088} INFO - Starting attempt 1 of 2
+[2021-08-13 07:00:21,432] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-13 07:00:21,455] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): transform_data> on 2021-08-12T00:00:00+00:00
+[2021-08-13 07:00:21,463] {standard_task_runner.py:52} INFO - Started process 211 to run task
+[2021-08-13 07:00:21,470] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pipeline_try', 'transform_data', '2021-08-12T00:00:00+00:00', '--job-id', '134', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_try1.py', '--cfg-path', '/tmp/tmpmmxltafy', '--error-file', '/tmp/tmpo9v5ikn6']
+[2021-08-13 07:00:21,483] {standard_task_runner.py:77} INFO - Job 134: Subtask transform_data
+[2021-08-13 07:00:21,603] {logging_mixin.py:104} INFO - Running <TaskInstance: pipeline_try.transform_data 2021-08-12T00:00:00+00:00 [running]> on host 99300daf4d26
+[2021-08-13 07:00:21,781] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=ameysonje242000@gmail.com
+AIRFLOW_CTX_DAG_OWNER=amey
+AIRFLOW_CTX_DAG_ID=pipeline_try
+AIRFLOW_CTX_TASK_ID=transform_data
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-12T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-12T00:00:00+00:00
+[2021-08-13 07:00:21,786] {logging_mixin.py:104} INFO - /opt/data/csv_data.csv
+[2021-08-13 07:00:21,793] {logging_mixin.py:104} INFO - /opt/data/csv_data_transformed.csv
+[2021-08-13 07:00:23,009] {python.py:151} INFO - Done. Returned value was: None
+[2021-08-13 07:00:23,048] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=pipeline_try, task_id=transform_data, execution_date=20210812T000000, start_date=20210813T070021, end_date=20210813T070023
+[2021-08-13 07:00:23,112] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-13 07:00:23,141] {local_task_job.py:149} INFO - Task exited with return code 0

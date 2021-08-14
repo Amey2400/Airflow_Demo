@@ -1,0 +1,24 @@
+[2021-08-12 10:23:58,582] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.thursday_Task 2021-08-12T10:23:50.187491+00:00 [queued]>
+[2021-08-12 10:23:58,608] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.thursday_Task 2021-08-12T10:23:50.187491+00:00 [queued]>
+[2021-08-12 10:23:58,609] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 10:23:58,609] {taskinstance.py:1088} INFO - Starting attempt 1 of 2
+[2021-08-12 10:23:58,612] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 10:23:58,624] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): thursday_Task> on 2021-08-12T10:23:50.187491+00:00
+[2021-08-12 10:23:58,632] {standard_task_runner.py:52} INFO - Started process 1539 to run task
+[2021-08-12 10:23:58,638] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pipeline_try', 'thursday_Task', '2021-08-12T10:23:50.187491+00:00', '--job-id', '48', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_try1.py', '--cfg-path', '/tmp/tmptw9wgp9i', '--error-file', '/tmp/tmp60da93yn']
+[2021-08-12 10:23:58,645] {standard_task_runner.py:77} INFO - Job 48: Subtask thursday_Task
+[2021-08-12 10:23:58,706] {logging_mixin.py:104} INFO - Running <TaskInstance: pipeline_try.thursday_Task 2021-08-12T10:23:50.187491+00:00 [running]> on host 99300daf4d26
+[2021-08-12 10:23:58,790] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=ameysonje242000@gmail.com
+AIRFLOW_CTX_DAG_OWNER=amey
+AIRFLOW_CTX_DAG_ID=pipeline_try
+AIRFLOW_CTX_TASK_ID=thursday_Task
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-12T10:23:50.187491+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-12T10:23:50.187491+00:00
+[2021-08-12 10:23:58,793] {logging_mixin.py:104} INFO - From thursday_Task, so its thursday today
+[2021-08-12 10:23:58,796] {python.py:151} INFO - Done. Returned value was: email
+[2021-08-12 10:23:58,825] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=pipeline_try, task_id=thursday_Task, execution_date=20210812T102350, start_date=20210812T102358, end_date=20210812T102358
+[2021-08-12 10:23:58,866] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-12 10:23:58,889] {local_task_job.py:149} INFO - Task exited with return code 0

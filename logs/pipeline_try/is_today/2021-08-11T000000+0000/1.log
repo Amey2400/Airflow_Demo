@@ -1,0 +1,52 @@
+[2021-08-12 11:53:09,936] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.is_today 2021-08-11T00:00:00+00:00 [queued]>
+[2021-08-12 11:53:09,969] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.is_today 2021-08-11T00:00:00+00:00 [queued]>
+[2021-08-12 11:53:09,970] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 11:53:09,970] {taskinstance.py:1088} INFO - Starting attempt 1 of 2
+[2021-08-12 11:53:09,971] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 11:53:09,989] {taskinstance.py:1107} INFO - Executing <Task(BranchPythonOperator): is_today> on 2021-08-11T00:00:00+00:00
+[2021-08-12 11:53:09,998] {standard_task_runner.py:52} INFO - Started process 1825 to run task
+[2021-08-12 11:53:10,004] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pipeline_try', 'is_today', '2021-08-11T00:00:00+00:00', '--job-id', '60', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_try1.py', '--cfg-path', '/tmp/tmprueogks8', '--error-file', '/tmp/tmps4tz0hdx']
+[2021-08-12 11:53:10,014] {standard_task_runner.py:77} INFO - Job 60: Subtask is_today
+[2021-08-12 11:53:10,205] {logging_mixin.py:104} INFO - Running <TaskInstance: pipeline_try.is_today 2021-08-11T00:00:00+00:00 [running]> on host 99300daf4d26
+[2021-08-12 11:53:10,324] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=ameysonje242000@gmail.com
+AIRFLOW_CTX_DAG_OWNER=amey
+AIRFLOW_CTX_DAG_ID=pipeline_try
+AIRFLOW_CTX_TASK_ID=is_today
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-11T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-11T00:00:00+00:00
+[2021-08-12 11:53:10,347] {logging_mixin.py:104} INFO - today is 2
+[2021-08-12 11:53:10,348] {python.py:151} INFO - Done. Returned value was: none
+[2021-08-12 11:53:10,349] {skipmixin.py:124} INFO - Following branch none
+[2021-08-12 11:53:10,367] {skipmixin.py:155} INFO - Skipping tasks ['thursday_Task']
+[2021-08-12 11:53:10,466] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=pipeline_try, task_id=is_today, execution_date=20210811T000000, start_date=20210812T115309, end_date=20210812T115310
+[2021-08-12 11:53:10,544] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-12 11:53:10,579] {local_task_job.py:149} INFO - Task exited with return code 0
+[2021-08-12 12:36:11,470] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.is_today 2021-08-11T00:00:00+00:00 [queued]>
+[2021-08-12 12:36:11,490] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.is_today 2021-08-11T00:00:00+00:00 [queued]>
+[2021-08-12 12:36:11,491] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 12:36:11,491] {taskinstance.py:1088} INFO - Starting attempt 1 of 2
+[2021-08-12 12:36:11,492] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 12:36:11,502] {taskinstance.py:1107} INFO - Executing <Task(BranchPythonOperator): is_today> on 2021-08-11T00:00:00+00:00
+[2021-08-12 12:36:11,507] {standard_task_runner.py:52} INFO - Started process 17326 to run task
+[2021-08-12 12:36:11,512] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pipeline_try', 'is_today', '2021-08-11T00:00:00+00:00', '--job-id', '83', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_try1.py', '--cfg-path', '/tmp/tmppjoy9ws2', '--error-file', '/tmp/tmpgt2ee65l']
+[2021-08-12 12:36:11,517] {standard_task_runner.py:77} INFO - Job 83: Subtask is_today
+[2021-08-12 12:36:11,585] {logging_mixin.py:104} INFO - Running <TaskInstance: pipeline_try.is_today 2021-08-11T00:00:00+00:00 [running]> on host 99300daf4d26
+[2021-08-12 12:36:11,653] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=ameysonje242000@gmail.com
+AIRFLOW_CTX_DAG_OWNER=amey
+AIRFLOW_CTX_DAG_ID=pipeline_try
+AIRFLOW_CTX_TASK_ID=is_today
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-11T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-11T00:00:00+00:00
+[2021-08-12 12:36:11,665] {logging_mixin.py:104} INFO - today is 2
+[2021-08-12 12:36:11,665] {python.py:151} INFO - Done. Returned value was: none
+[2021-08-12 12:36:11,666] {skipmixin.py:124} INFO - Following branch none
+[2021-08-12 12:36:11,678] {skipmixin.py:155} INFO - Skipping tasks ['thursday_Task']
+[2021-08-12 12:36:11,739] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=pipeline_try, task_id=is_today, execution_date=20210811T000000, start_date=20210812T123611, end_date=20210812T123611
+[2021-08-12 12:36:11,782] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-12 12:36:11,806] {local_task_job.py:149} INFO - Task exited with return code 0

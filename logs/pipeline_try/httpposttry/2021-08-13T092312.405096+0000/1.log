@@ -1,0 +1,26 @@
+[2021-08-13 09:23:21,659] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.httpposttry 2021-08-13T09:23:12.405096+00:00 [queued]>
+[2021-08-13 09:23:21,677] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: pipeline_try.httpposttry 2021-08-13T09:23:12.405096+00:00 [queued]>
+[2021-08-13 09:23:21,677] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-13 09:23:21,678] {taskinstance.py:1088} INFO - Starting attempt 1 of 2
+[2021-08-13 09:23:21,678] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-13 09:23:21,686] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): httpposttry> on 2021-08-13T09:23:12.405096+00:00
+[2021-08-13 09:23:21,692] {standard_task_runner.py:52} INFO - Started process 21239 to run task
+[2021-08-13 09:23:21,704] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pipeline_try', 'httpposttry', '2021-08-13T09:23:12.405096+00:00', '--job-id', '176', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_try1.py', '--cfg-path', '/tmp/tmpqfis008y', '--error-file', '/tmp/tmpt9c_rtt4']
+[2021-08-13 09:23:21,710] {standard_task_runner.py:77} INFO - Job 176: Subtask httpposttry
+[2021-08-13 09:23:21,758] {logging_mixin.py:104} INFO - Running <TaskInstance: pipeline_try.httpposttry 2021-08-13T09:23:12.405096+00:00 [running]> on host 99300daf4d26
+[2021-08-13 09:23:21,808] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=ameysonje242000@gmail.com
+AIRFLOW_CTX_DAG_OWNER=amey
+AIRFLOW_CTX_DAG_ID=pipeline_try
+AIRFLOW_CTX_TASK_ID=httpposttry
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-13T09:23:12.405096+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-13T09:23:12.405096+00:00
+[2021-08-13 09:23:21,810] {http.py:111} INFO - Calling HTTP method
+[2021-08-13 09:23:21,824] {base.py:78} INFO - Using connection to: id: http_post. Host: 172.31.208.1, Port: 8000, Schema: , Login: , Password: None, extra: {}
+[2021-08-13 09:23:21,827] {http.py:140} INFO - Sending 'POST' to url: http://172.31.208.1:8000/Users/
+[2021-08-13 09:23:21,849] {http.py:115} INFO - {"user_id":"amey6","password":"amey3","name":"amey2","email_id":"amey2420000@gmail.com"}
+[2021-08-13 09:23:21,906] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=pipeline_try, task_id=httpposttry, execution_date=20210813T092312, start_date=20210813T092321, end_date=20210813T092321
+[2021-08-13 09:23:21,946] {taskinstance.py:1265} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-08-13 09:23:21,992] {local_task_job.py:149} INFO - Task exited with return code 0
